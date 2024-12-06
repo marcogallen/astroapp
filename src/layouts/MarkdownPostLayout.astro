@@ -1,8 +1,28 @@
 ---
+import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
-<h1>
-    {frontmatter.title}
-</h1>
+<BaseLayout pageTitle={frontmatter.title}>
+<style>
+    .tag {
+        display: inline-block;
+        padding:0.5rem, 1rem;
+        font-weight: bold;
+        margin: 0.2rem;
+    }
+    .hero_image {
+        width:50vw;;
+        height:auto;
+    }
+</style>
 <p>Written by: {frontmatter.author}</p>
+<p>Published on: {frontmatter.pubDate.toString().slice(0,10)}</p>
+<p>Description: {frontmatter.description}</p>
+<img class="hero_image" src={frontmatter.image.url} alt={frontmatter.image.alt} />
+
 <slot />
+<h4>Tags</h4>
+{frontmatter.tags.map((tag)=>{
+    return <span class="tag">{tag}</span>
+})}
+</BaseLayout>

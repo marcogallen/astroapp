@@ -10,8 +10,6 @@ image:
 tags: ["astro", "blogging", "learning in public"]
 ---
 
-Published on: 2024-12-06
-
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 
 ## What I have accomplished
