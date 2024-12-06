@@ -1,5 +1,18 @@
 ---
+const pageTitle = "About Me"
 
+const indentity = {
+    firstName: "Marco",
+    lastName: "Gallen",
+    country: "Mexico",
+    occupation: "Product Manager",
+    hobbies: ["coding", "woodworking", "3D printing", "electronics"]
+};
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Python", "Power tools", "Linux", "NMAP"]
+
+const happy = true;
+const finished = false;
+const goal = 3;
 ---
 
 <html lang="en">
@@ -8,17 +21,32 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/blog">Blog</a>
-		<h1>About Me</h1>
+		<h1>{pageTitle}</h1>
         <h2>... And my astro adventures</h2>
         <p><strong>TL;DR;</strong> I'm a maker</p>
         <p>I'm a Product Manager by day, creative coder, curious creature by night (actually all the time) :D</p>
         <p>I enjoy learning and trying new things. from coding and learning new tools and frameworks to Electronics and 3D Printing. I also do some wood working on the side.</p>
         
+        <p> Here are some facts about me:</p>
+        <ul>
+            <li>My name is {indentity.firstName}</li>
+            <li>I'm from {indentity.country} and I work as a {indentity.occupation}</li>
+            {indentity.hobbies.length >= 2 &&
+                <li>Two of my hobbies are: {indentity.hobbies[0]} and {indentity.hobbies[1]}</li>
+            }
+        </ul>
+        <p>My skills are:</p>
+        <ul>
+            {skills.map((skill)=> <li>{skill}</li>)}
+        </ul>
+        {happy && <p>I am happy to be learning Astro</p>}
+        {finished && <p>I finished this tutorial</p>}
+        {goal === 3 ? <p>My goal is to finish in 3 days</p> : <p>My goal is not 3 days</p>}
 	</body>
 </html>
