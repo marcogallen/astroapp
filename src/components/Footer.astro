@@ -1,0 +1,28 @@
+---
+import Social from './Social.astro';
+const platforms = ["github", "linkedin", "instagram"];
+const username = "marcogallen";
+---
+<style>
+    footer {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+</style>
+<footer>
+    <p>Learn more about my projects on:</p>
+        <!-- <ul>
+
+            {platforms.map((platform)=>{
+                <Social platform={platform} username={username} />
+                // if(platform === "linkedin") {
+                //     return <li><a href={`https://www.${platform}.com/in/${username}`}>{platform}</a></li>    
+                // }
+                // return <li><a href={`https://www.${platform}.com/${username}`}>{platform}</a></li>
+            })}
+        </ul> -->
+        <Social platform="github" username="marcogallen" />
+        <Social platform="linkedin" username="in/marcogallen" />
+        <Social platform="instagram" username="marcogallen" />
+</footer>
