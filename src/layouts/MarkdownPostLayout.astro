@@ -22,7 +22,7 @@ const { frontmatter } = Astro.props;
 
 <slot />
 <h4>Tags</h4>
-{frontmatter.tags.map((tag)=>{
+{frontmatter.tags.map((tag: any)=>{
     return <span class="tag">{tag}</span>
 })}
 </BaseLayout>
