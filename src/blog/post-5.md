@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: Questions about Astro
 author: Astro Learner
 description: "Questions I have about Astro or things that don't make sense yet"
