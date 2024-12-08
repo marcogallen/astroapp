@@ -33,6 +33,6 @@ const {posts} = Astro.props;
     <p>Posts tagged with {tag}</p>
     <ul>
   <!-- //      {filteresPosts.map((post:any)=><BlogPost url={post.url} title={post.frontmatter.title} />)} -->
-  {posts.map((post:any)=><BlogPost url={`/posts/${post.id}`} title={post.data.title} />)}
+  {posts.map((post:any)=><BlogPost url={`/posts/${post.id}`} title={post.data.title} pubDate={post.data.pubDate}  />)}
     </ul>
 </BaseLayout>

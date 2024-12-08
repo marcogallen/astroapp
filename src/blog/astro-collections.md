@@ -15,7 +15,7 @@ Instead of having the posts or products or whatever, nested under a page/[someth
 
 This is my example, from memory, to create a collection of blog posts
 
-#### Steps:
+### Steps
 
 1. create a folder under src `src/blog`
 2. Transfer your files or populate the folder
